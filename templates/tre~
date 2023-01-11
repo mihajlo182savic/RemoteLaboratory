@@ -1,0 +1,51 @@
+<html>
+<head>	
+<style>
+body {
+	background: url(http://i.imgur.com/n43ImWA.png) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+</style>
+<script>
+function obavestenje(){
+alert("Napon je izmeren");
+}
+</script>
+</head>
+<body>
+	<style>
+			.main-container {
+				margin:0 auto;
+				text-align:center;
+				padding-top:20%;
+				width:85%;
+				float:center;
+				color:gray;
+				}
+			.mali {
+				margin: 0 auto;
+			
+				width:50%;
+				text-align: center;
+				}
+			hr{
+				width:80%;}
+			
+		</style>
+<big><big>
+<div class="main-container">
+<h1><b><u>Prva vezba</u><b></h1>
+<h2>Merenje napona</h2>
+<form><input type="submit" value="Izmeri napon" OnClick="obavestenje()"></form>
+
+
+<form><input type="submit" value="rezultati"></form>
+
+
+<form action="/nazad"><input type="submit" value="Vrati se nazad"></form>
+</div></big></big>
+</body>
+</html>

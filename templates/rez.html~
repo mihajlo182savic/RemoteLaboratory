@@ -1,0 +1,31 @@
+<html>
+<head>
+<script type="text/javascript">
+function funk()
+{
+file = fopen(getScriptPath('/home/pi/Desktop/SolarnaKutija/templates/info.txt'), 0);
+if(file != -1)
+alert("Greska!");
+}
+else{
+document.write('srci');
+
+var file_length = flength(file);
+document.write('srci');
+var content = fread(file,file_length);
+document.write('srci');
+var div = document.getElementById("myDiv");
+//alert(div);
+document.write('srci');
+div.write(content);
+fclose(file);
+}
+}
+</script>
+</head>
+<body onload="funk()">
+<div id="myDiv">
+<p>asd</p>
+</div>
+</body>
+<html>

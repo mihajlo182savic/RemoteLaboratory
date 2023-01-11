@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+window.history.forward();
+function noBack() 
+{
+    window.history.forward();
+}
+function blokiraj()
+{
+    document.getElementById('dugme').disabled = "disabled";
+}
+</script>	
+</head>
+<body onload="/noBack();" onpageshow="if (event.persisted) /noBack();" onunload="">
+<style>
+body 
+{
+    background: url(http://i.imgur.com/n43ImWA.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}			
+
+.main-container 
+{
+    margin:0 auto;
+    text-align:center;
+    padding-top:20%;
+    width:45%;
+    float:center;
+    color:gray;
+}
+.mali 
+{
+    margin: 0 auto;
+    width:50%;
+    text-align: center;
+}
+hr
+{
+    width:80%;
+}
+#dugme 
+{
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+#dugme 
+{
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+}
+
+#dugme:hover 
+{
+    background-color: #555555;
+    color: white;
+}
+</style>
+<div class=main-container>
+        <table border="3px" align="center" style="font-size:25;background-color: white;">
+           <tr>
+	        <th>Br.Merenja</th>
+	        <th>Napon</th>
+	        <th>Struja</th>
+	        <th>Snaga</th>
+           </tr>
+           <tr>
+                <td>2</td>
+                <th>{{napon}}</th>
+                <th>{{struja}}</th>
+                <th>{{snaga}}</th>
+            </tr>
+
+        </table><br><br>
+    <form action="/vezba3"><input type="submit" onClick="/blokiraj()" id="dugme" value="Predji na trece merenje"></form>
+</div>
+</body>
+</html>

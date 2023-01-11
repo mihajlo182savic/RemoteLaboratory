@@ -1,0 +1,112 @@
+<html>
+
+<style>
+	body {
+			background: url(http://i.imgur.com/n43ImWA.png) no-repeat center center fixed;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+		}
+
+	.button {
+		  display: inline-block;
+		  vertical-align: top;
+		  position: relative;
+		  overflow: hidden;
+		  min-width: 96px;
+		  line-height: 20px;
+		  padding: 0 24px;
+		  font-size: 14px;
+		  color: white;
+		  text-align: center;
+		  text-decoration: none;
+		  text-shadow: 0 1px #154c86;
+		  background-color: #247edd;
+		  background-clip: padding-box;
+		  border: 1px solid;
+		  border-color: #1c65b2 #18589c #18589c;
+		  border-radius: 4px;
+		  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.4), 0 1px 2px rgba(0, 0, 0, 0.2);
+		  box-shadow: inset 0 1px rgba(255, 255, 255, 0.4), 0 1px 2px rgba(0, 0, 0, 0.2);
+		  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
+		  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
+		  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
+		  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
+		}
+		.button:before {
+		  content: '';
+		  position: absolute;
+		  top: -25%;
+		  bottom: -25%;
+		  left: -20%;
+		  right: -20%;
+		  border-radius: 50%;
+		  background: transparent;
+		  -webkit-box-shadow: inset 0 0 38px rgba(255, 255, 255, 0.5);
+		  box-shadow: inset 0 0 38px rgba(255, 255, 255, 0.5);
+		}
+		.button:hover {
+		  background-color: #1a74d3;
+		}
+		.button:active {
+		  color: rgba(255, 255, 255, 0.9);
+		  text-shadow: 0 -1px #154c86;
+		  background: #1f71c8;
+		  border-color: #113f70 #154c86 #1c65b2;
+		  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.4);
+		  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.4);
+		  background-image: -webkit-linear-gradient(top, #1a5da5, #3a8be0);
+		  background-image: -moz-linear-gradient(top, #1a5da5, #3a8be0);
+		  background-image: -o-linear-gradient(top, #1a5da5, #3a8be0);
+		  background-image: linear-gradient(to bottom, #1a5da5, #3a8be0);
+		}
+		.button:active:before {
+		  top: -50%;
+		  bottom: -125%;
+		  left: -15%;
+		  right: -15%;
+		  -webkit-box-shadow: inset 0 0 96px rgba(0, 0, 0, 0.2);
+		  box-shadow: inset 0 0 96px rgba(0, 0, 0, 0.2);
+		  height: 10px;
+		}
+		.button-green {
+		  text-shadow: 0 1px #0d4d09;
+		  background-color: #1ca913;
+		  border-color: #147b0e #11640b #11640b;
+		}
+		.button-green:hover {
+		  background-color: #159b0d;
+		}
+		.button-green:active {
+		  text-shadow: 0 -1px #0d4d09;
+		  background: #189210;
+		  border-color: #093606 #0d4d09 #147b0e;
+		  background-image: -webkit-linear-gradient(top, #126d0c, #20c016);
+		  background-image: -moz-linear-gradient(top, #126d0c, #20c016);
+		  background-image: -o-linear-gradient(top, #126d0c, #20c016);
+		  background-image: linear-gradient(to bottom, #126d0c, #20c016);
+		}
+		h1{
+			color: #1ca913;
+				}
+		h3{
+			color: #cc0000;
+				}
+</style>
+ <head> 
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Solarni Kofer logovanje</title>
+	<link rel="icon" type="image/png" href="http://i.imgur.com/n43ImWA.png">
+ </head>
+  <body>
+<center>
+
+		<h1><b>LOGIN:</b></h1>
+		<form action="/toAdmin" method="POST">
+			<input type="text" name="ime" value="" placeholder="E-mail">
+			<input type="submit" class="button button-green" value="confirm">
+		</form>
+</center>
+  </body>
+</html>

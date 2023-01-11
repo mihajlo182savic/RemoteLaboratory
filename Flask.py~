@@ -1,0 +1,23 @@
+import sqlite3
+import RPi.GPIO as GPIO
+import atexit
+from datetime import datetime
+import logging 
+from flask import Flask , render_template, request , redirect , url_for
+import pygal
+import Adafruit_DHT
+from pygal.style import DarkColorizedStyle
+from apscheduler.schedulers.background import BackgroundScheduler
+from apscheduler.triggers.interval import IntervalTrigger
+ad = Flask(__name__)
+logging.basicConfig()
+
+
+@ad.route('/')
+def index():
+	print "Sine neko ti je usao na sajt"
+	return render_template('index.html')
+
+
+if __name__ == '__main__':
+		ad.run(debug=False ,  threaded=True , host='0.0.0.0' , port=5000) #vrati debug na false kad sve bude gotovo

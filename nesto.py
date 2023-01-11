@@ -1,0 +1,32 @@
+import serial
+
+connected = False
+
+locations=['/dev/ttyUSB0','/dev/ttyUSB1','/dev/ttyUSB2','/dev/ttyUSB3','/dev/ttyACM0']
+
+for device in locations:
+    try:
+        print "Trying...",device
+        ser = serial.Serial(device, 9600)
+        break
+    except:
+        print "Failed to connect on",device
+while not connected:
+    serin = ser.read()
+    connected = True
+
+## open text file to store the current   
+text_file = open("Merenje.txt", 'r+')
+## read serial data from arduino and 
+## write it to the text file 'position.txt'
+while 1:
+    if ser.inWaiting():
+        x=ser.read()
+        print(x) 
+        text_file.write(x)
+        if x=="\n":
+             ## text_file.seek(0)
+             text_file.truncate()
+        text_file.flush()
+text_file.close()
+ser.close()

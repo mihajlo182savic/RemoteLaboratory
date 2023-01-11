@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="shortcut icon" href="/static/ets.png" />
+<style>
+body 
+{
+    background: url(http://i.imgur.com/n43ImWA.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+</style>
+<script type="text/javascript">
+window.history.forward();
+function noBack() 
+{
+    window.history.forward();
+}
+function blokiraj()
+{
+    document.getElementById('dugme').disabled = "disabled";
+}
+</script>
+</head>
+<body onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload="">
+<style>
+.main-container 
+{
+    margin:0 auto;
+    width:85%;
+    float:center;
+    color:black;
+    padding-top:20%;
+    font-size: 20;
+    font-weight:bolder;
+
+}
+.mali 
+{
+    margin: 0 auto;
+    background-color:rgba(255,255,255,0.6);
+    border-radius: 25px;
+    position: absolute;
+    top: 30%;
+    left: 24.4%;
+    width:50%;
+    text-align: center;
+}
+#dugme 
+{
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.kamera{
+	position:absolute;
+	top:2%;
+	left:2%;
+}
+.kamerawan{
+	position:absolute;
+	top:20%;
+	left:2%;
+}
+
+#dugme 
+{
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+}
+#dugme:hover 
+{
+    background-color: #555555;
+    color: white;
+}
+</style>
+    <div class="main-container">
+	<div class="kamera">
+		<input type="submit" onclick="window.open('http://192.168.44.8:8081');" class="button" id="dugme" value="Kamera Lan">
+	</div>
+	<div class="kamerawan">
+		<input type="submit" onclick="window.open('http://etspupin.dynu.com:2102');" class="button" id="dugme" value="KameraWan">
+	</div>
+        <div class="mali">
+            <h1>Dobrodosli na Vezbu</h1>
+            <h2>Ova vezba se sastoji iz tri merenja</h2>
+
+      		  <form action="/vezba1"><input type="submit" onClick="/blokiraj()" class="button" id="dugme" value="Merenje 1"></form><br><br>
+        <!--        <a href="prva_vezba.html"><button type="submit" onClick="blokiraj()" class="button" id="dugme" value="Merenje 1">Merenje 1</button></a>-->
+        </div><br><br>
+    </div>
+</body>
+</html>
